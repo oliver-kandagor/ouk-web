@@ -155,6 +155,7 @@ const getDescription = (state: DeviceStateForToast): string | React.ReactNode =>
  * @param state The state of the device
  */
 export const showToast = (state: DeviceStateForToast): void => {
+    return;
     const myLogger = logger.getChild(`SetupEncryptionToast[${state}]:`);
     if (
         ModuleRunner.instance.extensions.cryptoSetup.setupEncryptionNeeded({

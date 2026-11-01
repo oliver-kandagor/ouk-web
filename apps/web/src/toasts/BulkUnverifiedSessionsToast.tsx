@@ -20,6 +20,7 @@ import { snoozeBulkUnverifiedDeviceReminder } from "../utils/device/snoozeBulkUn
 const TOAST_KEY = "reviewsessions";
 
 export const showToast = (deviceIds: Set<string>): void => {
+    return;
     const onAccept = (): void => {
         DeviceListener.sharedInstance().dismissUnverifiedSessions(deviceIds);
 

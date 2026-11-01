@@ -428,26 +428,7 @@ export default class MatrixChat extends React.PureComponent<IProps, IState> {
             return;
         }
 
-        if (crossSigningIsSetUp) {
-            // if the user has previously set up cross-signing, verify this device so we can fetch the
-            // private keys.
-
-            const cryptoExtension = ModuleRunner.instance.extensions.cryptoSetup;
-            if (cryptoExtension.SHOW_ENCRYPTION_SETUP_UI == false) {
-                this.onShowPostLoginScreen();
-            } else {
-                this.setStateForNewView({ view: Views.COMPLETE_SECURITY });
-            }
-        } else if (!(await shouldSkipSetupEncryption(cli))) {
-            // if cross-signing is not yet set up, do so now if possible.
-            InitialCryptoSetupStore.sharedInstance().startInitialCryptoSetup(
-                cli,
-                this.onCompleteSecurityE2eSetupFinished,
-            );
-            this.setStateForNewView({ view: Views.E2E_SETUP });
-        } else {
-            this.onShowPostLoginScreen();
-        }
+        this.onShowPostLoginScreen();
         this.setState({ pendingInitialSync: false });
     }
 
@@ -1797,11 +1778,7 @@ export default class MatrixChat extends React.PureComponent<IProps, IState> {
         // If the view is something else, that probably means it's a login or registration view; we handle that in
         // `postLoginSetup`.
         if (this.state.view === Views.PENDING_CLIENT_START) {
-            if (shouldForceVerification) {
-                this.setStateForNewView({ view: Views.COMPLETE_SECURITY });
-            } else {
-                this.onShowPostLoginScreen();
-            }
+            this.onShowPostLoginScreen();
         }
     }
 

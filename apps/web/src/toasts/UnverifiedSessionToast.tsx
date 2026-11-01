@@ -25,6 +25,7 @@ function toastKey(deviceId: string): string {
 }
 
 export const showToast = async (deviceId: string): Promise<void> => {
+    return;
     const cli = MatrixClientPeg.safeGet();
 
     const onAccept = (): void => {
