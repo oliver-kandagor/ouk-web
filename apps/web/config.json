@@ -1,0 +1,40 @@
+{
+    "default_server_config": {
+        "m.homeserver": {
+            "base_url": "https://ouk.noticum.app",
+            "server_name": "ouk.noticum.app"
+        },
+        "m.identity_server": {
+            "base_url": "https://vector.im"
+        }
+    },
+    "default_server_name": "ouk.noticum.app",
+    "disable_custom_urls": true,
+    "disable_guests": true,
+    "disable_login_language_selector": false,
+    "disable_3pid_login": true,
+    "force_verification": false,
+    "brand": "OUK Chat",
+    "branding": {
+        "welcome_background_url": "img/ouk_building.jpg",
+        "auth_header_logo_url": "img/ouk_logo.svg",
+        "logo_link_url": "https://ouk.noticum.app/web",
+        "auth_footer_links": [
+            { "text": "Open University of Kenya", "url": "https://ouk.ac.ke" },
+            { "text": "Download Android App", "url": "https://ouk.noticum.app/download" }
+        ]
+    },
+    "default_theme": "dark",
+    "setting_defaults": {
+        "breadcrumbs": true
+    },
+    "jitsi": {
+        "preferred_domain": "meet.element.io"
+    },
+    "element_call": {
+        "brand": "OUK Call",
+        "disable": false,
+        "use_exclusively": false
+    },
+    "map_style_url": "https://api.maptiler.com/maps/streets/style.json?key=fU3vlMsMn4Jb6dnEIFsx"
+}

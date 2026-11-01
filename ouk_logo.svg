@@ -1,0 +1,12 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="oukGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F3E6D"/>
+      <stop offset="1" stop-color="#092644"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="44" fill="url(#oukGrad)"/>
+  <path d="M100 45L35 80L100 115L165 80L100 45Z" fill="#E58A13"/>
+  <path d="M152 92V135H162V86.7L152 92Z" fill="#E58A13"/>
+  <path d="M58 104V136C58 152 100 162 100 162C100 162 142 152 142 136V104L100 127L58 104Z" fill="#FFFFFF"/>
+</svg>
